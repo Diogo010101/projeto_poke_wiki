@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width: 762px) and (max-width: 1200px)">
+    <script defer src="./js/music_start.js"></script>
+    <link rel="shortcut icon" href="./favicon-32x32.png" type="image.png">
+    <title>Pokémon Wiki</title>
+</head>
+<body>
+    <main>
+        <h1>Pokémon Wiki</h1>
+        <section class="container">
+            <div class="pokedex pokedexon">
+                <div>
+                    <h1>Red & Blue</h1>
+                </div>
+                <div>
+                    <audio class="pokeaudio" src="./sounds/01pokemon-red-and-blue-music-opening-theme.mp3" loop></audio>
+                </div>
+                <div>
+                    <video class="video" src="./videos/01poke_video_red.mp4" autoplay loop ></video>
+                </div>
+                <div>
+                    <p>Pokémon Red e Blue para GBA são remakes dos jogos originais de Pokémon, lançados para Game Boy em 1996. Os jogos
+                    apresentam gráficos melhorados, sons aprimorados, novo conteúdo e funcionalidades online. Eles são uma ótima opção para
+                    os fãs da série Pokémon que procuram uma experiência renovada.</p>
+                    <p>Em resumo, os jogos são uma ótima versão dos jogos originais, com melhorias gráficas e de jogabilidade. Eles também
+                    apresentam novo conteúdo, como novos Pokémon, movimentos e itens.</p>
+                </div>
+                <div><img class="capa" src="./img/01redcover.jpg" alt=""></div>
+                <div><button class="fechar" onclick="stopPokemon()">Fechar</button></div>
+            </div>
+            <div class="square" onclick="playPokemon()"><img class="capa_poke" src="./img/01redcover.jpg" alt=""></img></div>
+            <div class="square"><img class="capa_poke" src="./img/02goldcover.jpg" alt=""></img></div>
+            <div class="square"><img class="capa_poke"  src="./img/03rubycover.jpg" alt=""></img></div>
+            <div class="square"><img class="capa_poke" src="./img/04diamondcover.jpg" alt=""></img></div>
+            <div class="square"><img class="capa_poke" src="./img/05blackcover.jpg" alt=""></img></div>
+            <div class="square"><img class="capa_poke" src="./img/06xcover.jpg" alt=""></img></div>
+            <div class="square"><img class="capa_poke" src="./img/07suncover.jpg" alt=""></img></div>
+            <div class="square"><img class="capa_poke" src="./img/08lestsgopikachucover.jpg" alt=""></img></div>    
+            <div class="square"><img class="capa_poke" src="./img/09legendsarceuscover.jpg" alt=""></img></div>
+        </section>
+    </main>
+</body>
+</html>
