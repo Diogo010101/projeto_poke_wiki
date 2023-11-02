@@ -6,43 +6,648 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width: 762px) and (max-width: 1200px)">
+    <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 1200px)">
     <script defer src="./js/music_start.js"></script>
-    <link rel="shortcut icon" href="./favicon-32x32.png" type="image.png">
+    <link rel="shortcut icon" href="favicon.png" type="image.png">
     <title>Pokémon Wiki</title>
 </head>
 <body>
     <main>
         <h1>Pokémon Wiki</h1>
         <section class="container">
-            <div class="pokedex pokedexon">
+
+            <!--Pokedex 02 Red-->
+            <div class="pokedex">
                 <div>
-                    <h1>Red & Blue</h1>
+                    <h1>Pokémon Red e Blue</h1>
                 </div>
                 <div>
-                    <audio class="pokeaudio" src="./sounds/01pokemon-red-and-blue-music-opening-theme.mp3" loop></audio>
+                    <audio id="musica0" class="pokeaudio" src="./sounds/01pokemon-red-and-blue-music-opening-theme.mp3" loop></audio>
                 </div>
                 <div>
-                    <video class="video" src="./videos/01poke_video_red.mp4" autoplay loop ></video>
+                    <img class="img_topo" src="./gif/01red.gif" alt="">
                 </div>
                 <div>
-                    <p>Pokémon Red e Blue para GBA são remakes dos jogos originais de Pokémon, lançados para Game Boy em 1996. Os jogos
-                    apresentam gráficos melhorados, sons aprimorados, novo conteúdo e funcionalidades online. Eles são uma ótima opção para
-                    os fãs da série Pokémon que procuram uma experiência renovada.</p>
-                    <p>Em resumo, os jogos são uma ótima versão dos jogos originais, com melhorias gráficas e de jogabilidade. Eles também
-                    apresentam novo conteúdo, como novos Pokémon, movimentos e itens.</p>
+                    <h2>Introdução</h2>
+                    <p>Pokémon Red e Blue são jogos eletrônicos de RPG desenvolvidos pela Game Freak e publicados pela Nintendo para o Game
+                    Boy. Lançados em 1996 no Japão, 1998 na América do Norte e 1999 na Europa, são os jogos da primeira geração da série
+                    Pokémon.</p>
+
+                    <img class="img_topo" src="./img/red/01.jpg" alt="gif animado pokémon gold">
+
+                    <h2>História</h2>
+                    <p>Os jogos se passam na região de Kanto, uma terra inspirada no Japão. O jogador assume o papel de um jovem treinador
+                    Pokémon que viaja por Kanto para derrotar a Elite dos Quatro e o Campeão da Liga Pokémon. Ao longo do caminho, o jogador
+                    deve enfrentar outros treinadores Pokémon, capturar Pokémon selvagens e explorar a região.</p>
+
+                    <h2>Jogabilidade</h2>
+                    <p>Pokémon Red e Blue apresentam uma jogabilidade semelhante à dos jogos anteriores da série. O jogador controla um
+                    treinador Pokémon que viaja por Kanto, captura Pokémon selvagens, batalha contra outros treinadores e explora a região.</p>
+
+                    <img class="img_topo" src="./img/red/02.webp" alt="gif animado pokémon gold">
+                    <p>Os jogos introduziram vários novos recursos, incluindo:</p>
+                    <p>
+                        <ul>
+                            <li>Um sistema de batalha por turnos</li>
+                            <li>Um sistema de evolução de Pokémon</li>
+                            <li>Uma Pokédex, um catálogo de todos os Pokémon existentes</li>
+                        </ul>
+                    </p>
+
+                    <h2>Recepção</h2>
+                    <p>Pokémon Red e Blue foram um grande sucesso comercial, vendendo mais de 43 milhões de cópias em todo o mundo. Os jogos
+                    foram aclamados pela crítica e pelo público, e são considerados um dos melhores jogos de RPG de todos os tempos.</p>
+
+                    <h2>Legado</h2>
+                    <p>Pokémon Red e Blue são considerados o jogo que iniciou a febre Pokémon. Os jogos foram responsáveis por popularizar a
+                    série Pokémon em todo o mundo, e são considerados um marco na história dos jogos eletrônicos.</p>
+                    <img class="img_topo" src="./img/red/03.webp" alt="gif animado pokémon gold">
+
+                    <h2>Conclusão</h2>
+                    <p>Pokémon Red e Blue são jogos clássicos da série Pokémon. Os jogos oferecem uma experiência de RPG envolvente e
+                    divertida, com uma história emocionante e uma grande variedade de Pokémon para capturar e treinar.</p>
+
+                    <h2>Recursos adicionais</h2>
+                    <p>
+                        <ul>
+                            <li>Pokémon Red e Blue foram relançados em 2004 para o Game Boy Advance, com gráficos melhorados e novos recursos.</li>
+                            <li>Os jogos foram adaptados para o anime Pokémon, que se tornou uma das séries de anime mais populares do mundo.</li>
+                            <li>Pokémon Red e Blue inspiraram uma série de jogos, brinquedos, livros e outros produtos relacionados à franquia Pokémon.</li>
+                        </ul>
+                    </p>
+
+
+
+
                 </div>
                 <div><img class="capa" src="./img/01redcover.jpg" alt=""></div>
-                <div><button class="fechar" onclick="stopPokemon()">Fechar</button></div>
+                <div><button class="fechar" onclick="fechar(pokedex[0], musica0)">Fechar</button></div>
             </div>
-            <div class="square" onclick="playPokemon()"><img class="capa_poke" src="./img/01redcover.jpg" alt=""></img></div>
-            <div class="square"><img class="capa_poke" src="./img/02goldcover.jpg" alt=""></img></div>
-            <div class="square"><img class="capa_poke"  src="./img/03rubycover.jpg" alt=""></img></div>
-            <div class="square"><img class="capa_poke" src="./img/04diamondcover.jpg" alt=""></img></div>
-            <div class="square"><img class="capa_poke" src="./img/05blackcover.jpg" alt=""></img></div>
-            <div class="square"><img class="capa_poke" src="./img/06xcover.jpg" alt=""></img></div>
-            <div class="square"><img class="capa_poke" src="./img/07suncover.jpg" alt=""></img></div>
-            <div class="square"><img class="capa_poke" src="./img/08lestsgopikachucover.jpg" alt=""></img></div>    
-            <div class="square"><img class="capa_poke" src="./img/09legendsarceuscover.jpg" alt=""></img></div>
+
+            <!--Pokedex 02 Gold-->
+            <div class="pokedex">
+                <div>
+                    <h1>Pokémon Gold e Silver</h1>
+                </div>
+                <div>
+                    <audio id="musica1" src="./sounds/02_title_screen_gold_silver_version.mp3"></audio>
+                </div>
+                <div>
+                    <img class="img_topo" src="./gif/02gold.gif" alt="gif animado pokémon gold">
+                </div>
+                <div>
+                    <h2>Introdução</h2>
+
+                    <p>Pokémon Gold e Silver são jogos eletrônicos de RPG desenvolvidos pela Game Freak e publicados pela Nintendo para o Game
+                    Boy Color. Lançados em 2000 no Japão, 2001 na América do Norte e 2002 na Europa, são os jogos da segunda geração da
+                    série Pokémon.</p>
+
+                    <img class="img_topo" src="./img/gold/gba_color.jpg" alt="">
+
+                    <h2>História</h2>
+                    <p>Os jogos se passam na região de Johto, uma terra inspirada no Japão feudal. O jogador assume o papel de um jovem
+                    treinador Pokémon que viaja por Johto para derrotar a Elite dos Quatro e o Campeão da Liga Pokémon. Ao longo do caminho,
+                    o jogador deve enfrentar outros treinadores Pokémon, capturar Pokémon selvagens e explorar a região.</p>
+
+                    <h2>Jogabilidade</h2>
+                    <p>Pokémon Gold e Silver apresentam uma jogabilidade semelhante à dos jogos anteriores da série. O jogador controla um
+                    treinador Pokémon que viaja por Johto, captura Pokémon selvagens, batalha contra outros treinadores e explora a região.</p>
+
+                    <p>Os jogos introduziram vários novos recursos, incluindo:
+                        <ul>
+                            <li>Duas novas formas de Pokémon: Gold e Silver</li>
+                            <li>Um sistema de amizade entre Pokémon e treinadores</li>
+                            <li>A capacidade de viajar para a região de Kanto, a partir do primeiro jogo Pokémon</li>
+                        </ul>
+                    </p>
+
+                    <h2>Recepção</h2>
+                    <p>Pokémon Gold e Silver foram aclamados pela crítica e pelo público. Os jogos foram elogiados por sua jogabilidade,
+                    gráficos e história.</p>
+                    <img class="img_topo" src="./img/gold/Pokémon_GS_cover.png" alt="">
+
+                    <h2>Legado</h2>
+                    <p>Pokémon Gold e Silver são considerados um dos melhores jogos da série Pokémon. Os jogos foram um grande sucesso
+                    comercial, vendendo mais de 23 milhões de cópias em todo o mundo.</p>
+
+                    <h2>Conclusão</h2>
+                    <p>Pokémon Gold e Silver são jogos clássicos da série Pokémon. Os jogos oferecem uma experiência de RPG envolvente e
+                    divertida, com uma história emocionante e uma grande variedade de Pokémon para capturar e treinar.</p>
+                </div>
+
+                
+                <div><img class="capa" src="./img/02goldcover.jpg" alt=""></div>
+                <div><button class="fechar" onclick="fechar(pokedex[1], musica1)">Fechar</button></div>
+            </div>
+
+            <!--Pokedex 03 Ruby-->
+            <div class="pokedex">
+                <div>
+                    <h1>Pokémon Ruby e Sapphire</h1>
+                </div>
+                <div>
+                    <audio id="musica2" class="pokeaudio" src="./sounds/03_title_demo_departure_from_the.mp3" loop></audio>
+                </div>
+                <div>
+                    <img class="img_topo" src="./gif/03ruby.gif" alt="gif animado pokémon ruby">
+                </div>
+                <div>
+
+                    <h2>Introdução</h2>
+                    <p>Pokémon Ruby e Sapphire são jogos eletrônicos de RPG desenvolvidos pela Game Freak e publicados pela Nintendo para o
+                    Game Boy Advance. Lançados em 2002 no Japão, 2003 na América do Norte e 2004 na Europa, são os jogos da terceira geração
+                    da série Pokémon.</p>
+                    <img class="img_topo" src="./img/ruby/01.jpg" alt="">
+
+                    <h2>História</h2>
+                    <p>Os jogos se passam na região de Hoenn, uma terra inspirada no Japão. O jogador assume o papel de um jovem treinador
+                    Pokémon que viaja por Hoenn para derrotar a Elite dos Quatro e o Campeão da Liga Pokémon. Ao longo do caminho, o jogador
+                    deve enfrentar outros treinadores Pokémon, capturar Pokémon selvagens e explorar a região.</p>
+
+                    <h2>Jogabilidade</h2>
+                    <p>Pokémon Ruby e Sapphire apresentam uma jogabilidade semelhante à dos jogos anteriores da série. O jogador controla um
+                    treinador Pokémon que viaja por Hoenn, captura Pokémon selvagens, batalha contra outros treinadores e explora a região.</p>
+                    <img class="img_topo" src="./img/ruby/2.jpg" alt="">
+
+                    <p>Os jogos introduziram vários novos recursos, incluindo:</p>
+                    <p>
+                        <ul>
+                            <li>Uma nova região para explorar</li>
+                            <li>Novos Pokémon para capturar e treinar</li>
+                            <li>Um novo sistema de batalhas, com a introdução de habilidades e movimentos especiais</li>
+                            <li>A capacidade de batalhar online</li>
+                        </ul>
+                    </p>
+
+                    <h2>Recepção</h2>
+                    <p>Pokémon Ruby e Sapphire foram aclamados pela crítica e pelo público. Os jogos foram elogiados por sua jogabilidade,
+                    gráficos e história.</p>
+
+                    <h2>Legado</h2>
+                    <p>Pokémon Ruby e Sapphire são considerados um dos melhores jogos da série Pokémon. Os jogos foram um grande sucesso
+                    comercial, vendendo mais de 16 milhões de cópias em todo o mundo.</p>
+                    <img class="img_topo" src="./img/ruby/03.gif" alt="">
+
+                    <h2>Conclusão</h2>
+                    <p>Pokémon Ruby e Sapphire são jogos clássicos da série Pokémon. Os jogos oferecem uma experiência de RPG envolvente e
+                    divertida, com uma história emocionante e uma grande variedade de Pokémon para capturar e treinar.</p>
+
+                    <h2>Recursos adicionais</h2>
+                    <p>
+                        <ul>
+                            <li>Pokémon Ruby e Sapphire foram relançados em 2014 para o Nintendo 3DS, com gráficos melhorados e novos recursos.</li>
+                            <li>Os jogos foram adaptados para o anime Pokémon, que se tornou uma das séries de anime mais populares do mundo.</li>
+                            <li>Pokémon Ruby e Sapphire inspiraram uma série de jogos, brinquedos, livros e outros produtos relacionados à franquia
+                            Pokémon.</li>
+                        </ul>
+                    </p>
+                    <img class="img_topo" src="./img/ruby/04.gif" alt="">
+
+                    <h2>Avaliação</h2>
+                    <p>Pokémon Ruby e Sapphire são jogos de RPG clássicos que oferecem uma experiência envolvente e divertida. Os jogos
+                    apresentam uma grande variedade de Pokémon para capturar e treinar, uma história emocionante e uma região vibrante para
+                    explorar. Os jogos são um ótimo lugar para começar a série Pokémon ou para os fãs que procuram uma nova aventura.</p>
+
+
+                </div>
+                <div><img class="capa" src="./img/03rubycover.jpg" alt=""></div>
+                <div><button class="fechar" onclick="fechar(pokedex[2], musica2)">Fechar</button></div>
+            </div>
+
+            <!--Pokedex 04 Diamond-->
+            <div class="pokedex">
+                <div>
+                    <h1>Pokémon Diamond e Pearl</h1>
+                </div>
+                <div>
+                    <audio id="musica3" class="pokeaudio" src="./sounds/04_pokemon_diamond.mp3" loop></audio>
+                </div>
+                <div>
+                    <img class="img_topo" src="./gif/04diamond.gif" alt="gif animado pokémon iamond">
+                </div>
+                <div>
+            
+                </div>
+                <div>
+                    <h2>Introdução</h2>
+                    <p>Pokémon Diamond e Pearl são jogos eletrônicos de RPG desenvolvidos pela Game Freak e publicados pela Nintendo para o
+                    Nintendo DS. Lançados em 2006 no Japão, 2007 na América do Norte e 2008 na Europa, são os jogos da quarta geração da
+                    série Pokémon.</p>
+                    <img class="img_topo" src="./img/diamond/01.png" alt="">
+
+                    <h2>História</h2>
+                    <p>Os jogos se passam na região de Sinnoh, uma terra inspirada no Japão feudal. O jogador assume o papel de um jovem
+                    treinador Pokémon que viaja por Sinnoh para derrotar a Elite dos Quatro e o Campeão da Liga Pokémon. Ao longo do
+                    caminho, o jogador deve enfrentar outros treinadores Pokémon, capturar Pokémon selvagens e explorar a região.</p>
+
+                    <h2>Jogabilidade</h2>
+                    <p>Pokémon Diamond e Pearl apresentam uma jogabilidade semelhante à dos jogos anteriores da série. O jogador controla um
+                    treinador Pokémon que viaja por Sinnoh, captura Pokémon selvagens, batalha contra outros treinadores e explora a região.</p>
+                    <img class="img_topo" src="./img/diamond/02.jpg" alt="">
+
+                    <p>Os jogos introduziram vários novos recursos, incluindo:</p>
+                    <p>
+                        <ul>
+                            <li>Uma nova região para explorar</li>
+                            <li>Novos Pokémon para capturar e treinar</li>
+                            <li>Um novo sistema de batalhas, com a introdução de habilidades e movimentos especiais</li>
+                            <li>A capacidade de batalhar online</li>
+                        </ul>
+                    </p>
+
+                    <h2>Recepção</h2>
+                    <p>Pokémon Diamond e Pearl foram aclamados pela crítica e pelo público. Os jogos foram elogiados por sua jogabilidade,
+                    gráficos e história.</p>
+                    <img class="img_topo" src="./img/diamond/03.jpg" alt="">
+
+                    <h2>Legado</h2>
+                    <p>Pokémon Diamond e Pearl são considerados um dos melhores jogos da série Pokémon. Os jogos foram um grande sucesso
+                    comercial, vendendo mais de 18 milhões de cópias em todo o mundo.</p>
+
+                    <h2>Conclusão</h2>
+                    <p>Pokémon Diamond e Pearl são jogos clássicos da série Pokémon. Os jogos oferecem uma experiência de RPG envolvente e
+                    divertida, com uma história emocionante e uma grande variedade de Pokémon para capturar e treinar.</p>
+
+                    <h2>Recursos adicionais</h2>
+                    <p>
+                        <ul>
+                            <li>Pokémon Diamond e Pearl foram relançados em 2021 para o Nintendo Switch, com gráficos melhorados e novos recursos.</li>
+                            <li>Os jogos foram adaptados para o anime Pokémon, que se tornou uma das séries de anime mais populares do mundo.</li>
+                            <li>Pokémon Diamond e Pearl inspiraram uma série de jogos, brinquedos, livros e outros produtos relacionados à franquia
+                            Pokémon.</li>
+                        </ul>
+                    </p>
+
+                    <h2>Avaliação</h2>
+                    <img class="img_topo" src="./img/diamond/04.gif" alt="">
+                    <p>Pokémon Diamond e Pearl são jogos de RPG clássicos que oferecem uma experiência envolvente e divertida. Os jogos
+                    apresentam uma grande variedade de Pokémon para capturar e treinar, uma história emocionante e uma região vibrante para
+                    explorar. Os jogos são um ótimo lugar para começar a série Pokémon ou para os fãs que procuram uma nova aventura.</p>
+
+                    <h2>Conclusão</h2>
+                    <p>Pokémon Diamond e Pearl são jogos clássicos da série Pokémon que oferecem uma experiência de RPG envolvente e divertida.
+                    Os jogos são um ótimo lugar para começar a série Pokémon ou para os fãs que procuram uma nova aventura.</p>
+
+
+
+
+
+                </div>
+                <div><img class="capa" src="./img/04diamondcover.jpg" alt=""></div>
+                <div><button class="fechar" onclick="fechar(pokedex[3], musica3)">Fechar</button></div>
+            </div>
+
+
+            <!--Pokedex 05 Black-->
+            <div class="pokedex">
+                <div>
+                    <h1>Pokémon Black e White</h1>
+                </div>
+                <div>
+                    <audio id="musica4" class="pokeaudio" src="./sounds/05_pokemon_black.mp3" loop></audio>
+                </div>
+                <div>
+                    <img class="img_topo" src="./gif/05black.gif" alt="gif animado pokémon black">
+                </div>
+                <div>
+                    <h2>Introdução</h2>
+                    <p>Pokémon Black e White são jogos eletrônicos de RPG desenvolvidos pela Game Freak e publicados pela Nintendo para o
+                    Nintendo DS. Lançados em 2010 no Japão, 2011 na América do Norte e 2012 na Europa, são os jogos da quinta geração da
+                    série Pokémon.</p>
+                    <img class="img_topo" src="./img/black/04.jpg" alt="">
+
+                    <h2>História</h2>
+                    <p>Os jogos se passam na região de Unova, uma terra inspirada nos Estados Unidos. O jogador assume o papel de um jovem
+                    treinador Pokémon que viaja por Unova para derrotar a Elite dos Quatro e o Campeão da Liga Pokémon. Ao longo do caminho,
+                    o jogador deve enfrentar outros treinadores Pokémon, capturar Pokémon selvagens e explorar a região.</p>
+
+                    <h2>Jogabilidade</h2>
+                    <p>Pokémon Black e White apresentam uma jogabilidade semelhante à dos jogos anteriores da série. O jogador controla um
+                    treinador Pokémon que viaja por Unova, captura Pokémon selvagens, batalha contra outros treinadores e explora a região.</p>
+
+                    <P>Os jogos introduziram vários novos recursos, incluindo:</P>
+                    <p>
+                        <ul>
+                            <li>Uma nova região para explorar</li>
+                            <li>Novos Pokémon para capturar e treinar</li>
+                            <li>Um novo sistema de batalhas, com a introdução de ataques de campo</li>
+                            <li>A capacidade de batalhar online com jogadores de todo o mundo</li>
+                        </ul>
+                    </p>
+                    <img class="img_topo" src="./img/black/00.jpg" alt="">
+
+                    <h2>Recepção</h2>
+                    <p>Pokémon Black e White foram aclamados pela crítica e pelo público. Os jogos foram elogiados por sua jogabilidade,
+                    gráficos e história.</p>
+
+                    <h2>Legado</h2>
+                    <p>Pokémon Black e White são considerados um dos melhores jogos da série Pokémon. Os jogos foram um grande sucesso
+                    comercial, vendendo mais de 15 milhões de cópias em todo o mundo.</p>
+                    <img class="img_topo" src="./img/black/01.gif" alt="">
+
+
+                    <h2>Avaliação</h2>
+                    <p>Pokémon Black e White são jogos de RPG clássicos que oferecem uma experiência envolvente e divertida. Os jogos
+                    apresentam uma grande variedade de Pokémon para capturar e treinar, uma história emocionante e uma região vibrante para
+                    explorar. Os jogos são um ótimo lugar para começar a série Pokémon ou para os fãs que procuram uma nova aventura.</p>
+                    <img class="img_topo" src="./img/black/02.gif" alt="">
+
+                    <h2>Conclusão</h2>
+                    <p>Pokémon Black e White são jogos clássicos da série Pokémon. Os jogos oferecem uma experiência de RPG envolvente e
+                        divertida, com uma história emocionante e uma grande variedade de Pokémon para capturar e treinar.</p>
+
+
+
+
+
+
+                </div>
+                <div><img class="capa" src="./img/05blackcover.jpg" alt=""></div>
+                <div><button class="fechar" onclick="fechar(pokedex[4], musica4)">Fechar</button></div>
+            </div>
+
+            <!--Pokedex 06 X-->
+            <div class="pokedex">
+                <div>
+                    <h1>Pokémon X e Y</h1>
+                </div>
+                <div>
+                    <audio id="musica5" class="pokeaudio" src="./sounds/06_pokemon_x.mp3" loop></audio>
+                </div>
+                <div>
+                    <img class="img_topo" src="./gif/06x.gif" alt="gif animado pokémon X">
+                </div>
+                <div>
+                    <h2>Introdução</h2>
+                    <p>Pokémon X e Y são jogos eletrônicos de RPG desenvolvidos pela Game Freak e publicados pela Nintendo para o Nintendo 3DS.
+                    Lançados em 2013 no Japão, 2013 na América do Norte e 2013 na Europa, são os jogos da sexta geração da série Pokémon.</p>
+                    <img class="img_topo" src="./img/x/1.webp" alt="">
+
+                    <h2>História</h2>
+                    <p>Os jogos se passam na região de Kalos, uma terra inspirada na França. O jogador assume o papel de um jovem treinador
+                    Pokémon que viaja por Kalos para derrotar a Elite dos Quatro e o Campeão da Liga Pokémon. Ao longo do caminho, o jogador
+                    deve enfrentar outros treinadores Pokémon, capturar Pokémon selvagens e explorar a região.</p>
+
+                    <h2>Jogabilidade</h2>
+                    <p>Pokémon X e Y apresentam uma jogabilidade semelhante à dos jogos anteriores da série. O jogador controla um treinador
+                    Pokémon que viaja por Kalos, captura Pokémon selvagens, batalha contra outros treinadores e explora a região.</p>
+                    <img class="img_topo" src="./img/x/02.jpg" alt="">
+                    <p>Os jogos introduziram vários novos recursos, incluindo:</p>
+                    <p>
+                        <ul>
+                            <li>Uma nova região para explorar</li>
+                            <li>Novos Pokémon para capturar e treinar</li>
+                            <li>A capacidade de megaevolução, que permite que alguns Pokémon evoluam para uma forma mais poderosa</li>
+                            <li>A capacidade de batalhar online com jogadores de todo o mundo</li>
+                        </ul>
+                    </p>
+
+                    <h2>Recepção</h2>
+                    <p>Pokémon X e Y foram aclamados pela crítica e pelo público. Os jogos foram elogiados por sua jogabilidade, gráficos e
+                    história.</p>
+                    <img class="img_topo" src="./img/x/03.gif" alt="">
+                    <h2>Legado</h2>
+                    <p>Pokémon X e Y são considerados um dos melhores jogos da série Pokémon. Os jogos foram um grande sucesso comercial,
+                    vendendo mais de 27 milhões de cópias em todo o mundo.</p>
+
+                    <h2>Avaliação</h2>
+                    <p>Pokémon X e Y são jogos de RPG clássicos que oferecem uma experiência envolvente e divertida. Os jogos apresentam uma
+                    grande variedade de Pokémon para capturar e treinar, uma história emocionante e uma região vibrante para explorar. Os
+                    jogos são um ótimo lugar para começar a série Pokémon ou para os fãs que procuram uma nova aventura.</p>
+                    <img class="img_topo" src="./img/x/04.gif" alt="">
+
+                    <h2>Conclusão</h2>
+                    <p>Pokémon X e Y são jogos clássicos da série Pokémon. Os jogos oferecem uma experiência de RPG envolvente e divertida, com
+                    uma história emocionante e uma grande variedade de Pokémon para capturar e treinar.</p>
+
+
+
+
+
+
+
+                </div>
+                <div><img class="capa" src="./img/06xcover.jpg" alt=""></div>
+                <div><button class="fechar" onclick="fechar(pokedex[5], musica5)">Fechar</button></div>
+            </div>
+
+            <!--Pokedex 06 Sun-->
+            <div class="pokedex">
+                <div>
+                    <h1>Pokémon Sun e Moon</h1>
+                </div>
+                <div>
+                    <audio id="musica6" class="pokeaudio" src="./sounds/07_pokemon_sun.mp3" loop></audio>
+                </div>
+                <div>
+                    <img class="img_topo" src="./gif/07sun.gif" alt="gif animado pokémon SUN">
+                </div>
+                <div>
+                    <h2>Introdução</h2>
+                    <p>Pokémon Sun e Moon são jogos eletrônicos de RPG desenvolvidos pela Game Freak e publicados pela Nintendo para o Nintendo
+                    3DS. Lançados em 2016 no Japão, 2016 na América do Norte e 2016 na Europa, são os jogos da sétima geração da série
+                    Pokémon.</p>
+                    <img class="img_topo" src="./img/sun/01.jpg" alt="">
+
+                    <h2>História</h2>
+                    <p>Os jogos se passam na região de Alola, um arquipélago de ilhas tropicais. O jogador assume o papel de um jovem treinador
+                    Pokémon que viaja por Alola para derrotar a Elite dos Quatro e o Campeão da Liga Pokémon. Ao longo do caminho, o jogador
+                    deve enfrentar outros treinadores Pokémon, capturar Pokémon selvagens e explorar a região.</p>
+
+                    <h2>Jogabilidade</h2>
+                    <p>Pokémon Sun e Moon apresentam uma jogabilidade semelhante à dos jogos anteriores da série. O jogador controla um
+                    treinador Pokémon que viaja por Alola, captura Pokémon selvagens, batalha contra outros treinadores e explora a região.</p>
+                    <img class="img_topo" src="./img/sun/02.jpg" alt="">
+                    <p>Os jogos introduziram vários novos recursos, incluindo:</p>
+                    <p>
+                        <ul>
+                            <li>Uma nova região para explorar</li>
+                            <li>Novos Pokémon para capturar e treinar</li>
+                            <li>Um sistema de batalhas revisado, com a introdução de movimentos Z</li>
+                            <li>A capacidade de batalhar online com jogadores de todo o mundo</li>
+                        </ul>
+                    </p>
+
+                    <h2>Recepção</h2>
+                    <p>Pokémon Sun e Moon foram aclamados pela crítica e pelo público. Os jogos foram elogiados por sua jogabilidade, gráficos
+                    e história</p>
+                    <img class="img_topo" src="./img/sun/03.gif" alt="">
+                    <h2>Legado</h2>
+                    <p>Pokémon Sun e Moon são considerados um dos melhores jogos da série Pokémon. Os jogos foram um grande sucesso comercial,
+                    vendendo mais de 16 milhões de cópias em todo o mundo.</p>
+
+                    <h2>Avaliação</h2>
+                    <p>Pokémon Sun e Moon são jogos de RPG clássicos que oferecem uma experiência envolvente e divertida. Os jogos apresentam
+                    uma grande variedade de Pokémon para capturar e treinar, uma história emocionante e uma região vibrante para explorar.
+                    Os jogos são um ótimo lugar para começar a série Pokémon ou para os fãs que procuram uma nova aventura.</p>
+
+                    <h2>Conclusão</h2>
+                    <img class="img_topo" src="./img/sun/04.gif" alt="">
+                    <p>Pokémon Sun e Moon são jogos clássicos da série Pokémon que oferecem uma experiência de RPG envolvente e divertida. Os
+                    jogos são um ótimo lugar para começar a série Pokémon ou para os fãs que procuram uma nova aventura.</p>
+
+
+
+
+
+
+
+
+                </div>
+                <div><img class="capa" src="./img/07suncover.jpg" alt=""></div>
+                <div><button class="fechar" onclick="fechar(pokedex[6], musica6)">Fechar</button></div>
+            </div>
+
+            <!--Pokedex 07 Let's Go Pikachu!-->
+            <div class="pokedex">
+                <div>
+                    <h1>Pokémon Let's Go Pikachu!</h1>
+                </div>
+                <div>
+                    <audio id="musica7" class="pokeaudio" src="./sounds/08_pokemon_lests_go_pikachu.mp3" loop></audio>
+                </div>
+                <div>
+                    <img class="img_topo" src="./gif/08lets_go_pikachu.gif" alt="gif animado pokémon LET'S GO PIKACHU!">
+                </div>
+                <div>
+                    <h2>Introdução</h2>
+                    <p>Pokémon Let's Go Pikachu! e Pokémon Let's Go Eevee! são jogos eletrônicos de RPG desenvolvidos pela Game Freak e
+                    publicados pela Nintendo para o Nintendo Switch. Lançados em 2018, são remakes dos jogos Pokémon Yellow da Game Boy
+                    Color.</p>
+                    <img class="img_topo" src="./img/lpikachu/01.png" alt="">
+
+                    <h2>História</h2>
+                    <p>Os jogos se passam na região de Kanto, uma terra inspirada no Japão. O jogador assume o papel de um jovem treinador
+                    Pokémon que viaja por Kanto para capturar Pokémon selvagens, derrotar outros treinadores Pokémon e se tornar o Campeão
+                    da Liga Pokémon.</p>
+
+                    <h2>Jogabilidade</h2>
+                    <p>Pokémon Let's Go Pikachu! e Pokémon Let's Go Eevee! apresentam uma jogabilidade semelhante à dos jogos anteriores da
+                    série. O jogador controla um treinador Pokémon que viaja por Kanto, captura Pokémon selvagens, batalha contra outros
+                    treinadores e explora a região.</p>
+                    <img class="img_topo" src="./img/lpikachu/02.webp" alt="">
+                    <p>Os jogos introduziram vários novos recursos, incluindo:</p>
+                    <p>
+                        <ul>
+                            <li>Um sistema de captura baseado no Pokémon Go, onde o jogador joga uma Pokébola para capturar um Pokémon selvagem</li>
+                            <li>A capacidade de levar um Pokémon para passear fora da Pokébola</li>
+                            <li>A capacidade de usar itens e movimentos no mundo real para interagir com o jogo</li>
+                        </ul>
+                    </p>
+
+                    <h2>Recepção</h2>
+                    <p>Pokémon Let's Go Pikachu! e Pokémon Let's Go Eevee! foram aclamados pela crítica e pelo público. Os jogos foram
+                    elogiados por sua jogabilidade acessível e divertida, sua fidelidade aos jogos originais e sua inclusão de recursos do
+                    Pokémon Go.</p>
+                    <img class="img_topo" src="./img/lpikachu/03.gif" alt="">
+                    <h2>Legado</h2>
+                    <p>Pokémon Let's Go Pikachu! e Pokémon Let's Go Eevee! são considerados um dos melhores jogos da série Pokémon. Os jogos
+                    foram um grande sucesso comercial, vendendo mais de 11 milhões de cópias em todo o mundo.</p>
+
+                    <h2>Avaliação</h2>
+                    <p>Pokémon Let's Go Pikachu! e Pokémon Let's Go Eevee! são jogos de RPG clássicos que oferecem uma experiência envolvente e
+                    divertida. Os jogos apresentam uma grande variedade de Pokémon para capturar e treinar, uma história emocionante e uma
+                    região vibrante para explorar. Os jogos são um ótimo lugar para começar a série Pokémon ou para os fãs que procuram uma
+                    nova aventura.</p>
+                    <img class="img_topo" src="./img/lpikachu/04.gif" alt="">
+
+                    <h2>Conclusão</h2>
+                    <p>Pokémon Let's Go Pikachu! e Pokémon Let's Go Eevee! são jogos clássicos da série Pokémon. Os jogos oferecem uma
+                    experiência de RPG envolvente e divertida, com uma história emocionante e uma grande variedade de Pokémon para capturar
+                    e treinar.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+                <div><img class="capa" src="./img/08lestsgopikachucover.jpg" alt=""></div>
+                <div><button class="fechar" onclick="fechar(pokedex[7], musica7)">Fechar</button></div>
+            </div>
+
+            <!--Pokedex 08 Arceus-->
+            <div class="pokedex">
+                <div>
+                    <h1>Pokémon Legends: Arceus</h1>
+                </div>
+                <div>
+                    <audio id="musica8" class="pokeaudio" src="./sounds/09_pokemon_arceus.mp3" loop></audio>
+                </div>
+                <div>
+                    <img class="img_topo" src="./gif/09arceus.gif" alt="gif animado pokémon Legends Arceus">
+                </div>
+                <div>
+                    <h2>Introdução</h2>
+                    <p>Pokémon Legends: Arceus é um jogo eletrônico de RPG desenvolvido pela Game Freak e publicado pela Nintendo para o
+                    Nintendo Switch. Lançado em 2022, é um jogo de ação e aventura ambientado na região de Hisui, uma versão pré-histórica
+                    da região de Sinnoh.</p>
+                    <img class="img_topo" src="./img/arceus/01.avif" alt="">
+
+                    <h2>História</h2>
+                    <p>O jogador assume o papel de um jovem treinador Pokémon que viaja por Hisui para capturar Pokémon selvagens, completar o
+                    Pokédex e impedir que um Pokémon lendário cause uma catástrofe.</p>
+
+                    <h2>Jogabilidade</h2>
+                    <p>
+                        Pokémon Legends: Arceus apresenta uma jogabilidade semelhante à dos jogos anteriores da série, mas com algumas mudanças
+                        importantes. O jogador pode explorar a região de Hisui livremente, capturando Pokémon selvagens usando um novo sistema
+                        de captura. O jogador também pode criar itens e ferramentas para ajudá-lo em suas aventuras.
+                    </p>
+
+                    <h2>Recepção</h2>
+                    <p>Pokémon Legends: Arceus foi aclamado pela crítica e pelo público. Os jogos foram elogiados por sua jogabilidade
+                    inovadora, sua história envolvente e sua representação da região de Hisui.</p>
+                    <img class="img_topo" src="./img/arceus/02.webp" alt="">
+
+                    <h2>Legado</h2>
+                    <p>Pokémon Legends: Arceus é considerado um dos melhores jogos da série Pokémon. Os jogos foram um grande sucesso
+                    comercial, vendendo mais de 12 milhões de cópias em todo o mundo.</p>
+                    <img class="img_topo" src="./img/arceus/03.gif" alt="">
+
+                    <h2>Avaliação</h2>
+                    <p>Pokémon Legends: Arceus é um jogo de RPG inovador que oferece uma experiência envolvente e divertida. Os jogos
+                    apresentam uma grande variedade de Pokémon para capturar e treinar, uma história emocionante e uma região vibrante para
+                    explorar. Os jogos são um ótimo lugar para começar a série Pokémon ou para os fãs que procuram uma nova aventura.</p>
+                    <img class="img_topo" src="./img/arceus/04.gif" alt="">
+
+                    <h2>Conclusão</h2>
+                    <p>Pokémon Legends: Arceus é um jogo inovador que representa uma nova era para a série Pokémon. Os jogos oferecem uma
+                    experiência de RPG envolvente e divertida, com uma história emocionante e uma região vibrante para explorar.</p>
+
+
+
+
+
+
+
+
+
+
+                </div>
+                <div><img class="capa" src="./img/09legendsarceuscover.jpg" alt=""></div>
+                <div><button class="fechar" onclick="fechar(pokedex[8], musica8)">Fechar</button></div>
+            </div>
+
+
+            <div class="square" onclick="ativarPokedex(pokedex[0], musica0)"><img class="capa_poke" src="./img/01redcover.jpg" alt=""></img></div>
+            <div class="square" onclick="ativarPokedex(pokedex[1], musica1)"><img class="capa_poke" src="./img/02goldcover.jpg" alt=""></img></div>
+            <div class="square" onclick="ativarPokedex(pokedex[2], musica2)"><img class="capa_poke"  src="./img/03rubycover.jpg" alt=""></img></div>
+            <div class="square" onclick="ativarPokedex(pokedex[3], musica3)"><img class="capa_poke" src="./img/04diamondcover.jpg" alt=""></img></div>
+            <div class="square" onclick="ativarPokedex(pokedex[4], musica4)"><img class="capa_poke" src="./img/05blackcover.jpg" alt=""></img></div>
+            <div class="square" onclick="ativarPokedex(pokedex[5], musica5)"><img class="capa_poke" src="./img/06xcover.jpg" alt=""></img></div>
+            <div class="square" onclick="ativarPokedex(pokedex[6], musica6)"><img class="capa_poke" src="./img/07suncover.jpg" alt=""></img></div>
+            <div class="square" onclick="ativarPokedex(pokedex[7], musica7)"><img class="capa_poke" src="./img/08lestsgopikachucover.jpg" alt=""></img></div>    
+            <div class="square" onclick="ativarPokedex(pokedex[8], musica8)"><img class="capa_poke" src="./img/09legendsarceuscover.jpg" alt=""></img></div>
         </section>
     </main>
 </body>

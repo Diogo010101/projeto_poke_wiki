@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 :root{
     --cor01: #ffca08;
     --cor02: #3866aa;
@@ -22,6 +26,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
 
 }
 
@@ -31,6 +36,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 
 
 }
@@ -48,19 +54,22 @@ p{
 
 
 
+
+
 .container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    background-color: rgb(255, 110, 110);
+    background-color: rgba(255, 110, 110, 0.384);
     width: 300px;
     height: 100%;
     padding: 10px 0;
     border-radius: 10px;
     box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.267);
     transition: all 1s;
+    margin-bottom: 10px;
 
 }
 
@@ -69,6 +78,7 @@ p{
     height: 100px;
     border-radius: 5px;
     margin: 5px 0px;
+    cursor: pointer;
 
 }
 
@@ -80,14 +90,32 @@ p{
     margin: 5px 0px;
     width: 280px;
     height: 100%;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px 10px 0 0;
-    transition: all 1s;
-
+    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.178);
 }
+
+.pokedex h2{
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.pokedex li{
+    list-style: square;
+    text-align: left;
+    padding: 10px;
+    margin: 0 25px;
+    font-weight: bold;
+}
+
+.pokedex p{
+    text-align: justify;
+}
+
+
 
 .capa{
     width: 200px;
@@ -107,10 +135,8 @@ p{
 
 }
 
-.video{
-    width: 100%;
-    background-color: #408cff;
-
+.img_topo{
+    width: 250px;
 }
 
 .fechar{
@@ -122,4 +148,38 @@ p{
     align-self: center;
     margin: 10px;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+/*Orientação Horizoltal*/
+
+@media screen and (orientation: landscape) and (max-width: 768) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        background-color: rgb(255, 110, 110);
+        width: 600px;
+        height: 100%;
+        padding: 10px 0;
+        border-radius: 10px;
+        box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.267);
+        transition: all 1s;
+    }
+
+    .pokedex {
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 5px 0px;
+        width: 550px;
+        height: 100%;
+
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px 10px 0 0;
+    }
 }

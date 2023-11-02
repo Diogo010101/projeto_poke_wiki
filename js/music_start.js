@@ -1,29 +1,30 @@
-let audio = document.querySelector('.pokeaudio')
-let pokedex = document.querySelector('.pokedex')
-let video = document.querySelector('.video')
+let audio = document.querySelectorAll('.pokeaudio');
+let pokedex = document.querySelectorAll('.pokedex');
 
 
-function playPokemon(){
-    if (pokedex.style.display = 'none'){
-        pokedex.style.display = 'flex'
-        audio.volume = 0.2
-        audio.play();
-        video.play();
-    }else{
-        pokedex.style.display = 'none'
+function ativarPokedex(dex, music) {  
 
+    if (dex.style.display == 'none') {
+        dex.style.display = 'flex';
+        music.play()
+        music.volume = 0.1
+        window.scroll(0, 0);
+    } else {
+        dex.style.display = 'none'
     }
 }
 
-function stopPokemon(){
-    if(pokedex.style.display = 'flex'){
-        pokedex.style.display = 'none'
-        audio.pause()
-        video.pause()
+
+function fechar(dex, music){
+    if(dex.style.display == 'flex'){
+        music.pause()
+        dex.style.display = 'none'
     }else{
-        pokedex.style.display = 'block'
+        
     }
 }
+
+
 
 
 
