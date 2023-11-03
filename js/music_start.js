@@ -3,15 +3,24 @@ let pokedex = document.querySelectorAll('.pokedex');
 
 
 function ativarPokedex(dex, music) {  
-
-    if (dex.style.display == 'none') {
+    console.log(dex)
+    console.log(music)
+    console.log(ativarPokedex)
+    var status;
+    if(dex.style.display == 'flex'){
+        status = true
+        dex.style.display = 'none'
+        music.pause()
+    }else{
+        status = false
         dex.style.display = 'flex';
         music.play()
         music.volume = 0.1
         window.scroll(0, 0);
-    } else {
-        dex.style.display = 'none'
     }
+    console.log(status)
+
+
 }
 
 
